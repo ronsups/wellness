@@ -11,24 +11,14 @@
 
     <title>Resource @Skule Wellness</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+       <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/2-col-portfolio.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+ <script src="resources.js"></script>
 </head>
 
 <body>
-
-    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,13 +35,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Main Site</a>
+                        <a href="index.html">Main Site</a>
                     </li>
                     <li>
-                        <a href="#">Feelings</a>
+                        <a href="feelings.html">Feelings</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="index.html#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -60,29 +50,75 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
 
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Resource
+
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  
+    <div id="content">
+ <!-- Page Content -->
+               
+
+    <div class="container">
+  <h1 class="page-header">Resource
                     <small>To Help You</small>
                 </h1>
-            </div>
-        </div>
-        <!-- /.row -->
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <div class="mental-struggle">
-                <h3>
-                    <a href="#mental-description1">Physical Wellness</a>
-                </h3>
+        <!-- /.row -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+  //<![CDATA[
+  $(document).ready(function(){
+    $('#categoryform').show();
+    $('.box').hide();
+    $('.first-box').show();
+    $('#selectbox').focus();
+    $('#selectbox').bind("keyup change", function(){
+      $('.box').hide();
+      $('#' + $('#selectbox').val()).show();
+      return true;
+    });
+  });
+  //]]>
+</script>
+<div style="width:80%;padding:20px;margin:0 auto;border:1px solid grey;">
+<form id="categoryform" style="display:none;">
+Select a resource category: <select id="selectbox">
+    <optgroup label="Types of Wellness" id="Default">
+  <option value="Physical">Physical</option>
+  <option value="Mental">Mental</option>
+  <option value="Emotional">Emotional</option>
+  <option value="Social">Social</option>
+  <option value="Spiritual ">Spiritual</option>
+  <option value="Occupational">Occupational</option>
+    </optgroup>
+
+    <optgroup label="Campus Resources">
+  <option value="Academic">Academic Cousellors</option>
+  <option value="Chaplains">Campus Chaplains</option>
+    </optgroup>
+       
+       <optgroup label="Tips">
+  <option value="TimeMgt">Time Management</option>
+  <option value="Journal">Journal Techniques</option>
+    </optgroup>
+  
+</select>
+</form>
+
+<!--div class="box first-box" id="Default">
+ 
+</div-->
+<h3>   What is Wellness? </h3>
+<p>Wellness is a lifestyle. There are seven dimensions to wellness. They are as follows: Physical wellness, mental wellness, environmental wellness, emotional wellness, social wellness, spiritual wellness, and occupational wellness. By learning to balance these seven aspects of life, we can reduce the affects that daily stresses have on our lives, and live a happier life. The following pages will break down the seven dimensions, and give suggestions on how to improve them. 
+</p>
+
+<div class="box" id="Physical">
+                <h3>Physical Wellness</h3>
                 <p>Physical wellness is wellness relating to your overall physical health. This includes nutrition, sexual health, as well as physical activity and your body-image. 
 
-                 <div id="mental-description1">
+                 
                 <p>Ways to improve your physical wellness are: </p>
                 <ul>
                     <li>Exercise regularly: there are LOTS of ways to get active at U of T. 
@@ -120,85 +156,635 @@ Don’t forget to check out http://eaa.skule.ca/ to find out more about engineer
                 <li>Limit or avoid alcohol, tobacco, and other non-prescription drugs</li>
                 </ul>
             
-            </div>
-        </div>
-            
-            
-            
-            <div class="col-md-6 portfolio-item">
-               
-                <h3>
-                    <a href="#">Project Two</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                
-                <h3>
-                    <a href="#">Project Three</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Four</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                <div class="mental-struggle">
-                            <h2><a href="#mental-description5">Physical</a></h2>
-                            <div id="mental-description5">
-                                <p>accessible communication for everyone</p>
-                            </div>
-                </div>
-
-                
-            </div>
+</div>
 
 
-            <div class="col-md-6 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <div class="mental-struggle">
-                    <h3>
-                        <a href="#mental-description6">Project Six</a>
-                    </h3>
-                    
-                    <div id="mental-description6">
-                        <p>test</p>
-                    </div>
-                </div>
+<div class="box" id="Mental">
+<h3>Mental Wellness</h3>
+<p>Mental wellness is wellness pertaining to your overall mental health. It encourages stimulating mental activities, setting goals and motivating yourself to work productively and effectively to accomplishing them. One of the most important aspects of mental wellness is your ability to perform to the best of your ability and feel like you are having an impact on your community.</p>
+<p>Ways to improve your mental wellness are:</p>
+
+<ul>
+    <li>Find things that you find intellectually stimulating and that you are interested in: If you are finding that you want something more hands on than class work, join a design team and see how your courses translate to practical experiences. Sign up for a case competition and work in a team to solve a unique challenge using what you’ve learned. There are lots of ways at SKULE to get more out of your course work, and these are just a few. 
+    </li>
+
+    <li>
+        Set and meet realistic goals: If you are having trouble setting goals and working to achieve them, there is help! Drop by the first year office. They have a number of resources for time management and goal setting, regardless of what year you are in. Ensure to talk to the advisors about what you are feeling, and they can refer you to an academic advisor or learning strategist that will be able to help you in your situation. 
+    </li>
+
+    <li>
+        Celebrate when you accomplish a goal: Make sure that you are taking some time to enjoy yourself and have fun with your friends, especially when you accomplish something. Even if it’s as simple as finishing an assignment, make sure that you reward yourself for your hard work! You will be more motivated to keep working when you start your next task if you do.
+    </li>
+
+    <li>
+        Try something new: Pretty explanatory. University is the time to try a number of different experiences. Doing something different everyday, be it talking to a new person or trying a new club will allow you to grow as a person, but will also affect your professional lives as well! You never know what’s out there for you until you try so don’t be afraid to take the first step. 
+    </li>
+
+    <li>
+        Find your destressors and do them: This is SUPER important. University can be very stressful, especially engineering. This is also true of life as a whole. It is very important to find things that allow you to relax, and to do them on a regular basis. Whether it be playing sports, colouring, or doing music, it is very important to regularly destress to prevent the feeling of being overwhelmed. Check out our destressors on page BLANK and see if any of those work for you!
+    </li>
+
+    <li>
+        Try deep breathing exercises: Meditation and mindfulness are great ways to destress quickly. There are a number of how to guides or guided meditations on the internet. Check out the box breathing technique on page BLANK for just one of the many techniques! 
+    </li>
+
+    <li>
+        Learn how to change your thinking through journaling: Journaling is a really good technique to change the way you think about situations and to express yourself in general. Check out page BLANK for some journaling techniques!
+    </li>
+
+</ul>
+
+</div>
+
+<div class="box" id="Emotional">
+<h3>Emotional Wellness</h3>
+    <p>Emotional wellness has to do with understanding and accepting our own personal feelings while also acknowledging the thoughts and feelings of others. It deals with the ability to cope with stress, while also encompassing self esteem, self confidence, and  self control. 
+    </p>
+
+    <p>Ways to improve emotional wellness are: </p>
+
+    <ul>
+        <li>Learn about how and when emotions affect your body: When you’re stressed, do you stress eat? Do you get more irritable? Or do you get really hyper? By watching our emotions and how our behavior changes with them we can learn to control ourselves and limit the negative effects that strong emotions have on us. </li>
+        <li>Express yourself: Make sure that you express your needs, feelings, and opinions effectively but appropriately. If you are out with your friends and you are really hungry, tell them! If there is a conflict in your group project, make sure that you are getting your opinion out there, but also that you are listening to everyone else’s opinions. There is a time and place for everything!</li>
+        <li>Talk to a trusted friend or family member & vent: sometimes the best thing to do after a long day is to talk to someone. Sometimes hearing things out loud allows you to see how small a situation actually is, and it can really help to have an outsider’s point of view when dealing with something.</li>
+        <li>Use journal writing to relieve stress & express your thoughts/emotions: You can also vent to your journal. Journal writing is a great way to talk through all of your emotions and feelings, and to express yourself. Check out page BLANK for different ways to journal to relieve stress, or just express your thoughts. </li>
+        <li>Be optimistic: Make sure you believe in yourself & your abilities. You are a student at U of T, one of the best universities in Canada! You have accomplished a lot already and you are only a student. Don’t sell yourself short. One good way of improving self esteem is to write a list of everything you have accomplished so far, big and small, and leave it somewhere you see on a regular basis. Let this list affirmate yourself confidence and go accomplish your goals!</li>
+        <li>If you are feeling overwhelmed, talk to someone. Check out page BLANK to find the best resources for your situation.</li>
 
 
-            </div>
 
-        </div>
-        <!-- /.row -->
+    </ul>
 
-        <hr>
+</div>
 
+<div class="box" id="Social">
+<h3>Social Wellness</h3>
+    <p>Social wellness relates to connections you have with friends, family, and others. THis includes your connection in relationships (platonic, romantic, and sexual), how you express your sexuality, your support network, and being able to communicate feelings and needs with those around you. 
+    </p>
+    <p>Ways to improve social wellness are: <p>
+    
+    <ul>
+        <li>
+        Develop relationships where everyone feels good: If you are uncomfortable in a relationship or are not happy, talk to the other person about it. Try your best to work on the relationship until you are happy. If they do not make an effort to improve their behaviour, seek advice from a trusted friend or adult. Check out page BLANK for contact information.
+        </li>
+
+        <li>
+        Improve your social skills so you are able to interact with others in public and private situations.
+        </li>
+
+        <li>
+            Practice adapting to different social settings, until you grow comfortable with how to act. If you are in a new situation, don’t feel bad about taking a few minutes (or more) to get comfortable.
+        </li>
+
+        <li>
+            Stick to who you are (your values and beliefs) and don’t get persuaded by peer pressure: if you are not comfortable doing something, remember that you do not have to do it. Your friends will understand. Don’t be afraid to say no!
+        </li>
+
+        <li>
+            Join clubs!: U of T has a countless number of clubs! There really is something for everyone! Talk to your friends to see what clubs they are in, check facebook pages, for <a href=" http://skule.ca/clubs/#">engineering clubs</a>, and for <a href=" https://www.ulife.utoronto.ca/">University of Toronto wide clubs.</a>
+        </li>
         
-        <!-- /.row -->
+    <li>
+        Stay involved: Look for posters around campus, Facebook groups, and email newsletters to look for events happening around campus. Get out there and have fun! 
+    </li>
 
-        <hr>
 
+    </ul>
+
+</div>
+
+
+<div class="box" id="Spiritual">
+<h3>Spiritual wellness</h3>
+    <p>Spiritual wellness relates to having a set of beliefs, principles, and values that give meaning and purpose to your life. These do not have to be religious.
+    </p>
+
+    <p>Ways to improve your spiritual life include: </p>
+
+    <ul>
+        <li>
+        Find a philosophy of life that you want to live by: Go to www.multifath.utoronto.ca to find some of the workshops and programs being run at the Multi faith centre at U of T. They can link you to resources explaining the philosophies of the major religions of the world. 
+        </li>
+
+        <li>
+            Feel connected with yourself and others: Take time to live in the moment and spend time with your friends, without technology and enjoying the human to human connection.
+        </li>
+
+        <li>
+            Find purpose in the little things: it can get really hard to motivate yourself to work on a weekly problem set if you don’t think of the bigger picture. Remember to take a step back and look at how the little things fit into your life as a whole, and help you achieve your goals.
+        </li>
+
+        <li>
+            Establish a set of personal beliefs, morals, and/or religion: These beliefs and morals don’t have to be set in stone. However, having personal beliefs aids with making day to day choices about how to live your life. Talk to your parents, family, friends, or the campus chaplains (see PAGE BLANK) to learn more about the beliefs that they hold to help you select your core beliefs. 
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="box" id="Occupational">
+<h3>Occupational wellness</h3>
+    <p>Occupational wellness is how engaged and satisfied you feel with school, your future job, your career aspirations, and your attitude towards work and how your work contributes to the community. 
+    </p>
+
+    <p>Ways to improve your occupational wellness include:</p>
+
+    <ul>
+            <li>
+        Explore your interests: If you don’t know what branch of engineering you want to go into, 
+        design teams and other engineering related clubs are a great way to learn more about the different things you can 
+        do within engineering. Check out  http://skule.ca/clubs/# to learn more.
+            </li>
+
+            <li>
+                Talk to upper years and recent alumni about work: Upper years and alumni are a great way to learn more about what engineering is like in the workplace. Having gone through PEY (or working full time) means that they have insight that you can’t get at school.
+            </li>
+
+            <li>
+            Talk to academic advisors: Talk to your academic advisor and ask them any questions you have about engineering and the different career paths you can take. If they don’t know the answer, they will refer you to someone who will, maybe even a professor who works in the field! Check out PAGE BLANK to find out who your academic advisor is.
+            </li>
+
+            <li>
+            Talk to your professors: The career paths of the faculty and staff at U of T are very diverse. Talk to your professors to learn more about the route they took, and see if it interests you! 
+            </li>
+
+            <li>
+                Don’t worry: It’s okay if you don’t know what you want to do. That’s what university is for! Explore your options. If you don’t like what you’re doing, it’s not the end of the world. Very few people know what they want to do when they come to university. Go with the flow, explore your options, and enjoy the ride!
+            </li> 
+
+    </ul>
+</div>
+
+<div class="box" id="Environmental">
+    <h3>Environmental wellness</h3>
+    <p>Environmental wellness is wellness relating to the environment you’re in. This can be related to things like air and water pollution, or even something as simple as having a quiet place to study and relax in.
+    </p>
+
+    <p>Ways to improve your environmental wellness include: <p>
+        <ul>
+            <li>Find your ideal study environment: Try studying in a whole bunch of different places to see what works best for you. Some ideas include a desk at home, one of U of T’s 44 libraries (find the list at https://onesearch.library.utoronto.ca/visit), or in one of the common rooms. Try studying with friends, and then alone. Everyone is different so don’t worry if what works for you is different from what works for your friends. When it comes to exams and midterms, getting a good grade is more important. 
+            </li>
+
+            <li>
+                Make yourself at home: If you are leaving home for the first time, make sure your dorm room/ apartment is decorated. Put up some pictures of friends or family, and add a little decor to the room. The small things will make the room feel more like home, and will allow you to have a safe space to come home to everyday.
+            </li>
+
+            <li>
+                Do your part to maintain a clean environment: Do your dishes on a daily basis, Make your bed, Recycle your trash. Coming home to a clean house/room feels amazing, and reduces the added stress that comes when living in clutter.
+            </li>
+
+            <li>
+                Spend some time in the sun: Make sure that you let some light in to get your vitamin D, be it by walking to school or leaving a window open.
+            </li>
+        </ul>
+    </div>
+<!--/select-->
+
+    <div class="box" id="TimeMgt">
+        <h3>Time Management</h3>
+        <p>Procrastinating: If you catch yourself procrastinating, try to think of why you are procrastinating. Why are you avoiding it? Is it because you don’t enjoy the task, or is it something else? Finding out the reason you procrastinate is very important to battling procrastination. Once you find out the cause, you can work to address them. If you would like help with it, talk to your academic advisors. 
+        </p>
+
+        <p>Staying Organized: At university, you have so many things to keep track of with all of your different assignments, projects, and events. Staying organized can seem really difficult, but it is possible!
+        </p>
+
+        <ul>
+            <li>
+                Figure out a way to keep track of dates that works for you. Some people like using a planner, such as the skule planner or another agenda. Other people like using their phones or computers so that they can keep track of their dates at all times from anywhere. Figure out what method works for you, and use it. 
+            </li>
+
+            <li>
+                Leave yourself reminders a few days before a big assignment or exam is so that you nothing sneaks up on you. 
+            </li>
+            <li>
+                Have designated areas for every course: Whether that means having a specific notebook or binder for every course, or a specific spot in your desk, make sure that you keep things sorted so that when it comes to studying for your midterm you have all of your notes in one place
+            </li>
+        </ul>
+
+        <p>Scheduling/Completing tasks: With only 24 hours in a day, it can seem impossible to get your work done. But when you schedule your time out, you will find it easier to get stuff done. There are a number of ways to do this</p>
+        <ul>
+            <li>
+                Use a planner that has time blocks: Some daily planners have 30 minute time slots. Use them to plan out what you’re going to do every hour of the day
+            </li>
+            <li>
+                For some people, having a more flexible way of completing tasks works better. To do lists are a great way to keep track of what needs to get done. Organize your tasks into priority for the day, priority for the week, and then whenever tasks. Start by completing your day tasks, then move on to the week, and then the whenever tasks. Sometimes whenever tasks (such as cleaning your room) can serve as breaks from doing school work and are a nice way to take a break without wasting time. 
+            </li>
+            <li>
+                Use a pomodoro timer: The Pomodoro method involves working for a set amount of time (typically 25 minutes) and then taking a short break (typically 5 minutes) and then repeating. If you find it difficult to focus, pomodoro timers are a great way to get work done, as the length that you have to work for is so short that you can convince yourself to keep working. There are a number of great apps that use the pomodoro method. On your computer, lanes.io is great for planning out your day and using a timer. The graphics are great too!
+            </li>
+        </ul>
+    </div>
+
+     <div class="box" id="Journal">
+        <h3>Journal Techniques</h3>
+        <h4>General: </h4>
+        <ul>
+            <li>
+                Write whatever you are thinking. If you can’t think of anything to write about, write that down! Give yourself 5-10 minutes of your pen on paper and see where it ends up.
+            </li>
+            <li>
+                Write about an event that happened to you in third person: if there is something that you are struggling with or a major event that you wish went differently, write about it in third person. This will give you an outsider’s perspective on the event and will allow you to cope.
+            </li>
+            <li>
+                Write about your day
+            </li>
+            <li>
+                Write about how you are feeling at this moment in time (with regards to friends, school, life, anything)
+            </li>
+            <li>
+                Google different journal prompts: Journal prompts are a great way to expand your self-reflections and change up your ideas. One fun one is to write about the object that is nearest to you (ie when you bought, it your relationship with it, the possibilities are endless). Google “journaling prompts” to find dozens more. 
+            </li>
+        </ul>
+
+        <h4>For worrying</h4>
+        <p>Write down what you are worried about. Then, if you want to take it a step further, write down the worst thing, best thing, and the most likely thing that could happen in every situation based on past experiences. Let’s say you’re worried about forgetting the words to your presentation. The worst that could happen is that you forget them and you have to look at your notes. It’s not as big a deal as you think! The best case scenario is that the presentation goes perfectly. The most likely thing is that you stumble over a few words but its still okay. Sometimes writing down the worst case, most likely case, and best case scenarios can help you deal with your worries by showing you that your fears are exaggerated, and that the ‘worst case’ isn’t really that bad anyway.
+            </p>
+
+  </div>
+
+<div class="box" id="Chaplains">
+        <h4>Aboriginal</h4>
+        <p>First Nations House<br>
+        Elder Andrew Wesley<br>
+        416-978-8227<br>
+        fnh.info@utoronto.ca</p>
+
+        <h4>Buddhist</h4>
+        <p>Indo-Tibetan/Vajrayana<br>
+        Marco Mascarin PhD<br>
+        416-537-0928<br>
+        marco.mascarin@utoronto.ca</p>
+
+        <h4>Buddhist</h4>
+        <p>Theravada<br>
+        Rev. Bhante Saranapala<br>
+        905-274-7421<br>
+        bsaranapala@utoronto.ca<br>
+        www.westendbuddhist.com</p>
+
+        <h4>Christian - Catholic</h4>
+        <p>Roman Catholic<br>
+        Father Chris Cauchi<br>
+        416-979-2468 x 223<br>
+        fr.chris@newmantoronto.com<br>
+        www.newmantoronto.com</p>
+
+        <h4>Christian - Catholic</h4>
+        <p>Roman Catholic<br>
+            Erin Kinsella<br>
+            416-979-2468 x 222<br>
+            erin@newmantoronto.com<br>
+            www.newmantoronto.com</p>
+
+        <h4>Christian - Catholic</h4>
+        <p>Roman Catholic<br>
+        Sonal Castelino<br>
+        416-978-2468 x 244<br>
+        sonal@newmantoronto.com<br>
+        www.newmantoronto.com</p>
+
+        <h4>Christian - Protestant</h4>
+        <p>Anglican<br>
+        Rev. Andrea Budgey<br> 
+        416-978-3288<br>
+        chaplain@trinity.utoronto.ca</p>
+
+        <h4>Christian - Protestant</h4>
+        <p>Baptist<br>
+        Greg Alexander<br>
+        geg.gta.toronto@gmail.com</p>
+
+        <h4>Christian - Protestant</h4>
+        <p>Christian Reformed<br>
+        Rev. Geoff Wichert <br>
+        geoff.wichert@utoronto.ca</p>
+
+
+    <h4>Christian - Protestant</h4>
+       <p> Inter-Varsity Christian Fellowship<br>
+    Tony Lai<br>
+    647-521-2076<br>
+    ismchaplain@gmail.com</p>
+
+    <h4>Christian - Protestant</h4>
+    <p>Inter-Varsity Christian Fellowship<br>
+    Fiona Jack<br>
+    fjack@ivcf.ca</p>
+
+
+    <h4>Christian - Protestant</h4> 
+    <p>Inter-Varsity Christian Fellowship<br>
+    Preston Steinke<br>
+    905-073-6947<br>
+    psteike@ivcf.ca</p>
+
+    <h4>Christian - Protestant</h4>
+    <p>Power to Change<br>
+    Archie Kenyon<br>
+    647-838-6585<br>
+    archie.kenyon@p2c.com</p>
+
+
+
+    <h4>Christian - Protestant</h4>
+    <p>Presbyterian/United<br>
+    Rev. Ralph Carl Wushke<br>
+    416-978-2785<br>	
+    ecumenical.chaplain@utoronto.ca<br>
+    Ecumenical Chaplaincy website</p>
+
+    <h4>Christian - Protestant</h4>
+    <p>Presbyterian/United<br>
+    Susan Harrison<br>
+    416-978-2785	<br>
+    student.minister@utoronto.ca</p>
+
+    <h4>Christian - Protestant</h4>
+    <p>Presbyterian/United<br>
+    Jeanette Unger<br>
+    416-978-2785</p>
+
+    <h4>Hindhu</h4>
+    <p>Pandit Suraj Persad<br>
+    416-530-1899<br>
+    suraj.persad@utoronto.ca<br>
+    www.hinduchaplaincy.com</p>
+
+    <h4>Hindhu</h4>
+    <p>Vedanta<br>
+    Swami Kripamyanananda<br>
+    416-240-7262<br>
+    society@vedantatoronto.ca<br>
+    www.vedantatoronto.ca</p>
+
+    <h4>Humanist</h4>
+    <p>Mary Beaty<br>
+    416-951-9980<br>
+    mary.beaty@utoronto.ca</p>
+
+    <h4>Humanist</h4>
+    <p>Arran Liddel<br>
+    647-712-7726<br>
+    arranlidel@gmail.com</p>
+
+    <h4>Jain</h4>
+    <p>Raj Patil<br>
+    905-792-8655<br>
+    drpatil@hotmail.com</p>
+
+    <h4>Jewish</h4>
+    <p>Jewish Rabbi Aaron Greenberg<br>
+    416-843-0245<br>
+    aaron.greenberg@hilleltoronto.org</p>
+
+    <h4>Jewish</h4>
+    <p>Hillel<br>
+    Marc Newburgh<br>
+    416-913-2424<br>
+    marc.newburgh@hilleltoronto.org<br>
+    www.hilleltoronto.org</p>
+
+    <h4>Muslim</h4>
+    <p>Amjad Tarsin<br>
+    416-813-4099<br>
+    amjad@mcuoft.com<br>
+    www.mcuoft.com</p>
+
+    <h4>Muslim</h4>
+    <p>Iman Abdul Hai Patel<br>
+    416-282-4342<br>
+    afsaz@rogers.com</p>
+
+    <h4>Pagan</h4>
+    <p>Celtic & Reconstructionist<br>
+    Brian Walsh<br>
+    416-657-2220<br>
+    brian.walsh@newtara.org<br>
+    www.newtara.org</p>
+
+    <h4>Pagan</h4>
+    <p>Wiccan<br>
+    Catherine Starr<br>
+    416-230-7769<br>
+    catherine.starr@utoronto.ca</p>
+
+    <h4>Sikh</h4>
+    <p>Sikh Dharma<br>
+    Guru Fatha Singh Khalsa<br>
+    416-888-8535<br>
+    gurufathasingh@gmail.com<br>
+    www.gurufathasingh.com</p>
+
+    <h4>Unitarian Universalist</h4>
+    <p>Unitarian Universalist<br>
+    Rev. Jeffrey Brown<br>
+    416-599-6528<br>
+    jeffrey.brown@utoronto.ca</p>
+
+</div>
+
+<div class="box" id="Academic">
+<h3>Academic Advisors</h3>
+
+    <h4>Core 8 First Year</h4>
+    <p>First Year Office<br>
+    firstyear@ecf.utoronto.ca<br> 
+    416-978-4625 <br>
+    35 St. George Street (Galbraith Building), Room 170</p>
+
+    <h4>Chemical Engineering (upper year) </h4>
+    <p>Jane Chung, Academic Advisor<br>  
+    ugrad.chemeng@utoronto.ca <br>
+    (416) 978-5336 <br>
+    WB216 (Room 216, Wallberg Building)</p>
+
+    <h4>Computer/Electrical Engineering (upper year) </h4>
+    <p>General Inquiries<br>
+    askece@ecf.utoronto.ca </p>
+
+    <h4>Linda Espeut, Academic Advisor </h4>
+    <p>linda.espeut@utoronto.ca <br>
+    (416) 978-8570 <br>
+    SF-B600 (Room B600, Sandford Fleming Building) </p>
+
+    <h4>Civil/Mineral Engineering (upper year) </h4>
+    <p>Shayni Curtis-Clarke, Student Records and Services Coordinator <br>
+    shayni@civ.utoronto.ca<br> 
+    (416) 978-5905 <br>
+    GB105 (Room 105, Galbraith Building)</p>
+
+    <h4>Engineering Science (all years) </h4>
+    <p>General Inquiries: <br>
+    asknsci@ecf.utoronto.ca </p>
+
+    <h4>Sherry Lin, Admissions Officer & Undergraduate Counsellor, Years 1 & 2 </h4>
+    <p>nsci1_2@ecf.utoronto.ca <br>
+    (416) 946-7351 <br>
+    BA2110 (Room 2110, Bahen Centre for Information Technology) </p>
+
+    <h4>Amber Gertzbein, Academic Advisor, Years 3 & 4 </h4>
+    nsci3_4@ecf.utoronto.ca<br> 
+    (416) 946-7352 <br>
+    BA2110 (Room 2110, Bahen Centre for Information Technology)</p>
+
+    <h4>Industrial/Mechanical Engineering (upper year) </h4>
+    <p>Carla Baptista, Academic Advisor <br>
+    undergrad@mie.utoronto.ca <br>
+    (416) 978-6420 <br>
+    MC 109 (Room 109, Mechanical Engineering Building)</p>
+
+    <h4>Materials Engineering (upper year) </h4>
+    <p>Maria Fryman, Academic Advisor <br>
+    maria.fryman@utoronto.ca <br>
+    (416) 978-1374 <br>
+    WB140 (Wallberg Building)</p>
+
+</div>
+
+  </div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+  //<![CDATA[
+  $(document).ready(function(){
+    $('#categoryfeel').show();
+    $('.box').hide();
+    $('.first-box').show();
+    $('#selectbox2').focus();
+    $('#selectbox2').bind("keyup change", function(){
+      $('.box').hide();
+      $('#' + $('#selectbox2').val()).show();
+      return true;
+    });
+  });
+  //]]>
+</script>
+
+<div style="width:80%;padding:20px;margin:0 auto;border:1px solid grey;">
+<form id="categoryfeel" style="display:none;">
+I'm feeling: <select id="selectbox2">
+  <option value="stressed">stressed</option>
+  <option value="lonely">lonely/having trouble making friends</option>
+  <option value="worried">really worried about everything all the time</option>
+</select>
+</form>
+<div class="box first-box" id="stressed">
+<h3>I’m feeling stressed</h3>
+<p>Stress is a normal part of daily life. University life is often particularly stressful due to school, social aspects, and the fact that for many of us, university is the first time we have to take care of ourselves. At times it can seem overwhelming, but don’t worry, there are ways to calm down your stress! 
+</p>
+<p>Steps you can take: </p>
+<ul>
+    <li>
+        Identify your stressors: Every time you feel stressed about something, write it down on a piece of paper or your phone. At the end of the day (or week), look at your stressors and see if there are things that you can manage better. For example, if you are stressed because you don’t feel like you have enough time to do your homework, try making a daily schedule for yourself where you plan in exactly how much time you’re going to spend goofing around, and how much time you’re going to spend doing homework. 
+    </li>
+
+    <li>
+        Take up a hobby as a destressor: Everyone needs a way to unwind at the end of the day. Whether its playing the guitar, reading, or playing video games, find what it is that helps you to relax and do it on a regular basis. You might feel like you’re wasting time, but when you work with a clear mind you can accomplish a lot more in any given amount of time. Make sure you set a timer for yourself so you don’t get too distracted though!
+    </li>
+    <li>
+        Make exercise part of your daily routine: As engineers we have busy schedules, but staying active on a regular basis is very important to preventing stress from building up in your body. Join an intramural team, go to the gym with friends, or take up yoga! The possibilities really are endless. http://www.athletics.utoronto.ca/ or http://eaa.skule.ca/ to get some ideas as to staying active on campus!
+    </li>
+
+    <li>
+        Eat and sleep well: Again, as engineers this can be tricky. Try and set yourself a routine of packing snacks in the morning and sleeping at the same time every day. If you plan your meals and sleep schedule ahead of time then you will find yourself with more time to focus on other things, and your body and mind will be ready to take on your daily tasks.
+    </li>
+
+    <li>
+        Take time out for friends and family: Socialization and fun is really important to keeping yourself happy, and healthy. Set aside time at least once a week to do something fun with your friends or family, and during that time try not to think about school or work. If you are more of an introvert, set aside some time for yourself once a week to recharge and relax.
+    </li>
+
+    </li>Try problem solving techniques: if you are stressed about something really big, try breaking down the issue into little smaller tasks/problems and try tackling those instead. The smaller things are the more manageable they become.
+    </li>
+
+    <li>Learn relaxation techniques: Relaxation techniques such as box breathing or meditation can be very useful in moments of high stress such as right before a presentation or exam. Check out page blank to see some examples.  
+    </li>
+</ul>
+
+<h4>People YOU can talk to: </h4>
+<p>If you feel like your stress is becoming overwhelming, talk to your academic advisors (see page BLANK). They will be able to aid you with further resources for stress management, and come up with a plan to help you manage your stress and your life better.
+</p>
+
+</div>
+
+
+<div class="box" id="lonely">
+<h3>I’m feeling lonely/I’m having trouble making friends
+</h3>
+<p>The transition to university can be hard, as you’re in a new place with an entirely different set of people and you have to take care of yourself. Not knowing people can make things really hard. 
+    But <em>don’t worry!</em> Everyone feels a little lost and lonely at the start of university, or even during university for that matter. Making friends is not as hard as it seems, as long as you take the initiative. Here are some tips! 
+</p>
+
+<ul>
+    <li>
+        Introduce yourself to the person sitting next to you in class: If you haven’t spoken to the person sitting next to you in class, say hi before class starts! Tell them your name, and a little bit about yourself. Ask them about the homework. At the end of class, if you don’t understand something, ask them if they got it. The next time you have that same class, try and sit near them again and talk to them. If after one or two classes you don’t seem to click, try sitting next to someone else. You’re going to spend a lot of time in class at SKULE so making friends in your classes is important and will happen all of your 4+ years at U of T. 
+    </li>
+    <li>
+        Join clubs: Joining clubs are a great way to meet new people. You’ll be seeing the same people every week, working on a project or doing an activity together. Get to know your clubmates! You all have something in common (as you’re in the same club) but try and get to know them better by finding out what else they are interested in. 
+    </li>
+    <li>
+        Get to know the people on your floor: If you’re in residence, you’re going to be spending a full year living on the same floor as a whole bunch of people. When you see them in the hallways, say hi! Introduce yourself. Start a conversation.. Who knows, you could find out you live right next door, and become friends.
+    </li>
+    <li>
+        Go to events: Events happening around SKULE are a great way to meet new people without having the commitment of a club. Play with the BNAD, go to SUDS, or do a workshop! You’re guaranteed to meet some awesome people. The great thing is that a lot of events are recurring so you can keep seeing the people regularly giving you time to develop a friendship.
+    </li>
+    <li>
+        Hang out in the common room: Chilling in the common room is a great way to meet people in your discipline. A lot of common rooms have video games or foosball set up. If you’re bored, start a game with someone! 
+    </li>
+
+    <li>
+        Most importantly, Take the initiative and be open: Oftentimes you’ll find friends in people you’d least expected. Be open-minded and don’t judge a book by its cover. The more time you spend with a person the more you will get to know them, what they’re interested in, and how much you have in common. So make sure to give it some time before you jump to conclusions about a person. And take initiative! Don’t be afraid to talk to someone for the first time. You could meet your best friend that way!
+    </li>
+
+</ul>
+
+</div>
+
+
+<div class="box" id="worried">
+    <h3>I’m really worried about everything all the time
+    </h3>
+    <p>A lot of people find themselves worrying about things a lot more once they come to university. In some people, the worrying comes as negative nagging thoughts at random points in the day. For others, the negative thoughts can be so debilitating that they can’t do anything for a while. If you are someone who experiences the latter (also known as panic attacks) book an appointment with your academic advisor and tell them about your experiences. If you don’t experience panic attacks, here are some ways to less your anxiety:
+    </p>
+
+    <ul>
+        <li>
+            Talk to someone: Talk to your friends, and family about how you feel. Talking to people in the same situation as you (ie classmates) can be very helpful because a lot of the times they are concerned about the same things you are! Talk about what is scaring you and you will find that you aren’t alone in how you feel. It will also be very relieving to get it off your chest, as talking it out can sometimes help you realize that what you thought was a big problem is actually insignificant.
+        </li>
+
+        <li>
+            Do a deep breathing or meditation exercise: Check out page BLANK for some examples of breathing exercises you can do when you are caught up in your thoughts, or use google to find what works best for you!
+        </li>
+
+        <li>
+            Focus on the present: A lot of times when we worry about stuff we got lost in our thoughts which isolates us from our surroundings and makes everything seem worse. When you are feeling overwhelmed, try bringing yourself back to the present. Look around you. Try and identify the colours you see, all of the different sounds you are hearing, or the smells around you. Distracting yourself will allow you to get out of that overwhelmed state and calm yourself down, allowing you to face your fears with a clear head.
+        </li>
+
+        <li>
+            Listen to your favourite song: Music can help with calming you down and focusing on the present. Play your favourite songs, put on headphones, and allow yourself to get lost in the music. 
+        </li>
+
+        <li>
+            Make a list of successes: Write down a list of all of the things you’ve accomplished in the past and keep it visible. That allows you to see how capable you are as a human being, and show you the way you were able to face your fears in the past.
+        </li>
+
+        <li>
+            Journal: Write down what you are worried about. Then, if you want to take it a step further, write down the worst thing, best thing, and the most likely thing that could happen in every situation based on past experiences. Lets say you’re worried about forgetting the words to your presentation. The worst that could happen is that you forget them and you have to look at your notes. It’s not as big a deal as you think! The best case scenario is that the presentation goes perfectly. The most likely thing is that you stumble over a few words but its still okay. Sometimes writing down the worst case, most likely case, and best case scenarios can help you deal with your worries by showing you that your fears are exaggerated, and that the ‘worst case’ isn’t really that bad anyway.
+        </li>
+
+    </ul>
+
+    <p>If these techniques aren’t helping much, book an appointment with your academic counsellor and they can assess the situation and give you recommendations of how to cope.</p>
+</div>
+</div>
+
+
+
+
+       
         <!-- Footer -->
+<div>
         <footer>
             <div class="row">
                 <div class="col-lg-12">
@@ -216,7 +802,7 @@ Don’t forget to check out http://eaa.skule.ca/ to find out more about engineer
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+</div>
 </body>
 
 </html>
